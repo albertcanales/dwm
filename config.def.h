@@ -54,17 +54,11 @@ static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
 	{ "[M]",      monocle },
-	{ "[@]",      spiral },
-	{ "[\\]",     dwindle },
 	{ "H[]",      deck },
 	{ "TTT",      bstack },
 	{ "===",      bstackhoriz },
-	{ "HHH",      grid },
-	{ "###",      nrowgrid },
-	{ "---",      horizgrid },
 	{ ":::",      gaplessgrid },
 	{ "|M|",      centeredmaster },
-	{ ">M>",      centeredfloatingmaster },
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
@@ -111,7 +105,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[13]} },
+	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[7]} },
 	{ MODKEY,                       XK_comma,  cyclelayout,    {.i = -1 } },
 	{ MODKEY,                       XK_period, cyclelayout,    {.i = +1 } },
 	{ MODKEY,                       XK_z,      setlayout,      {0} },
