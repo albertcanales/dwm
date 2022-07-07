@@ -82,6 +82,7 @@ static const char *appmenu[]    = { "rofi",  "-show",  "drun", NULL };
 static const char *runmenu[]    = { "rofi", "-show", "run", NULL };
 static const char *powermenu[]  = { "rofi", "-show", "power-menu", "-modi", "power-menu:/home/albert/.config/rofi/rofi-power-menu", NULL };
 
+#include "movestack.c"
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -100,6 +101,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_h,      setcfact,       {.f = +0.25} },
 	{ MODKEY|ShiftMask,             XK_l,      setcfact,       {.f = -0.25} },
 	{ MODKEY|ShiftMask,             XK_o,      setcfact,       {.f =  0.00} },
+	{ MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
